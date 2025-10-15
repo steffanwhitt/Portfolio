@@ -7,6 +7,15 @@ body{
     margin: 0;
     text-align: center;
 }
+/* Make box-sizing predictable and prevent elements from overflowing their containers */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* hide any accidental horizontal overflow (keeps layout from spilling off-screen) */
+html, body {
+    overflow-x: hidden;
+}
 .heading{
     display: flex;
     align-items: center;    /* vertical centering */
@@ -129,7 +138,8 @@ svg{
 }
 
 .card p{
-    min-width: 300px;
+    /* allow paragraphs to be flexible and not force a minimum width that can overflow */
+    min-width: 0;
     max-width: 40vw;
     text-align: justify;
     background-color: rgba(91, 236, 229, 0.171);
@@ -137,6 +147,7 @@ svg{
     padding: 20px;
     border-radius: 20px;
     margin: 1rem;
+    word-wrap: break-word; /* prevent long words/URLs from overflowing */
 }
 
 .card img{
@@ -162,11 +173,12 @@ svg{
 
 /*Closing*/
 .closing-container{
-    display: flexbox;
+    display: flex; /* fixed typo: flexbox -> flex */
     align-items: center;
     justify-content: center;
     width: 80vw;
     margin-left: 10vw;
+    flex-wrap: wrap; /* allow children to wrap on small screens */
 }
 
 .closing h2{
