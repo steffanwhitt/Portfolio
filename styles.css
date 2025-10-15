@@ -1,0 +1,266 @@
+html{
+    font-size: 12pt;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+    margin: 0;
+    text-align: center;
+}
+.heading{
+    display: flex;
+    align-items: center;    /* vertical centering */
+    justify-content: center;/* horizontal centering */
+    height: 80vh;           /* keep your existing height */
+    background-image: url("./assets/Images/Forest\ Background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    width: 100%;
+    opacity: 1;
+}
+
+.profile-card{
+    display: flex;
+    gap: 1rem;            /* spacing between image and text */
+    align-items: center;  /* vertical align within the row */
+    justify-content: center;
+    flex-wrap: wrap;      /* allow wrap on small screens */
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* prefer width for predictable sizing and object-fit so image stays circular and not distorted */
+.profile-image img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 10px solid lch(33.11% 29.59 166.27 / 0.305); 
+}
+
+.profile-name {
+    text-align: center;
+    margin-left: 3rem;
+    background-color: #add9c5a9;
+    border: 2px solid black;
+    border-radius: 10px;
+    backdrop-filter: blur(3px);
+}
+
+.profile-name h1{
+    font-family: "DM Serif Text", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+    margin: 0;
+    padding:0 10px 0 10px;
+}
+
+.profile-name h2{
+    font-size: 1rem;
+    margin: 0;
+}
+
+.nav-button{
+    background-color: #0a7fd8;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: .5rem;
+    margin-top: 1rem;
+    margin-left: .75rem;
+    margin-right: .75rem;
+    cursor:pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    padding: .4rem;
+    display: inline-flex;
+    align-items: center;
+}
+
+.nav-button a{
+    color: white;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.nav-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+svg{
+    margin: 0 .4rem; /*remove top and bottom margin and put some space between the sides*/
+}
+
+/*About Me Section*/
+.about-me{
+    background-color: #add9c548;
+}
+
+.section-heading h1{
+    font-family: "DM Serif Text", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4rem;
+    margin-top: 0;
+    padding-top: 2rem;
+}
+
+.card-objects{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card h2{
+    font-family: "DM Serif Text", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+    margin-bottom: 0;
+    margin-top: 4rem;
+}
+
+.card h2 span{
+    color: green;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.card p{
+    min-width: 300px;
+    max-width: 40vw;
+    text-align: justify;
+    background-color: rgba(91, 236, 229, 0.171);
+    border: solid;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 1rem;
+}
+
+.card img{
+    margin: 1rem;
+    max-height: 15rem;
+    border: solid 15px #56a689;
+    border-radius: 0 20%;
+}
+
+.paragraph{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.paragraph p{
+    max-width: 80vw;
+}
+
+/*Closing*/
+.closing-container{
+    display: flexbox;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+    margin-left: 10vw;
+}
+
+.closing h2{
+    font-family: "DM Serif Text", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+    margin-bottom: 0;
+    margin-top: 2rem;
+}
+
+.closing button{
+    background-color: #3bfb1e;
+    border-radius: 5px;
+    border: none;
+    margin: .5rem 0;
+    cursor:pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    padding: .4rem;
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.closing button a{
+    text-decoration: none;
+    color: black;
+    padding: 7px;
+    font-weight: 700;
+}
+
+.closing button:hover {
+    background-color: #1eb903; /* Darker blue on hover */
+}
+
+/*Footer*/
+footer{
+    background-color: #085942b5;
+}
+
+.footer-list{
+    display: flex;
+}
+
+footer a{
+    color: white;
+}
+
+footer li{
+    display: inline-block;
+}
+
+footer ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+footer p{
+    color: white;
+}
+
+/* small screens: stack the card */
+@media (max-width: 600px) {
+   /*Change the entire document font size to better fit on a phone*/
+    html{
+        font-size: 9pt;
+    }
+
+  .profile-card {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  /* When stacked, remove the desktop left margin and center the name block */
+  .profile-name {
+    margin-left: 0;
+    margin: 0 auto;
+    align-self: center;
+  }
+
+  .card-objects{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    }
+
+
+    .card img{
+        max-width: 50%;
+        max-height: 30rem;
+    }
+
+    .footer-list{
+        flex-direction: column;
+    }
+
+    footer li{
+        display: block;
+    }
+}
