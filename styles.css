@@ -241,7 +241,7 @@ footer p{
 }
 
 /* small screens: stack the card */
-@media (max-width: 600px) {
+@media (max-width: 850px) {
    /*Change the entire document font size to better fit on a phone*/
     html{
         font-size: 9pt;
